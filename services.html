@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <style type="text/css">
+    body {
+      background: url('carwash.jpg') no-repeat center center fixed; /* Replace with your background image */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.7); /* Replace with your preferred opacity value */
+      padding: 25px;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+	input[type="checkbox"] {
+      transform: scale(1.5); /* Increase the size of the checkbox */
+      margin-right: 10px; /* Add some spacing between the checkbox and label */
+    }
+
+    label {
+      font-size: 1.5em; /* Increase the size of the label text */
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      background-color: #070707;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Select a Service</h1>
+    <h2>Oil Change</h2>
+    <label for="oil-yes">Yes</label>
+    <input type="checkbox" id="oil-yes" name="oil-change" value="yes">
+    <label for="oil-no">No</label>
+    <input type="checkbox" id="oil-no" name="oil-change" value="no"><br>
+	<h2>Car Wash</h2>
+    <label for="car-wash-yes">Yes</label>
+    <input type="checkbox" id="car-wash-yes" name="car-wash" value="yes">
+    <label for="car-wash-no">No</label>
+    <input type="checkbox" id="car-wash-no" name="car-wash" value="no"><br>    
+    <h2>Parking</h2>
+    <label for="parking-yes">Yes</label>
+    <input type="checkbox" id="parking-yes" name="parking" value="yes">
+    <label for="parking-no">No</label>
+    <input type="checkbox" id="parking-no" name="parking" value="no">
+	<input type="submit" value="Submit">
+    <br>
+	
+    
+  </form>
+
+  <script type="text/javascript">
+    const oilYes = document.getElementById('oil-yes');
+    const oilNo = document.getElementById('oil-no');
+    const parkingYes = document.getElementById('parking-yes');
+    const parkingNo = document.getElementById('parking-no');
+	const carwashYes = document.getElementById('car-wash-yes');
+    const carwashNo = document.getElementById('car-wash-no');
+
+    oilYes.addEventListener('change', function() {
+      oilNo.checked = !this.checked;
+    });
+
+    oilNo.addEventListener('change', function() {
+      oilYes.checked = !this.checked;
+    });
+
+    parkingYes.addEventListener('change', function() {
+      parkingNo.checked = !this.checked;
+    });
+
+    parkingNo.addEventListener('change', function() {
+      parkingYes.checked = !this.checked;
+    });
+	carwashYes.addEventListener('change', function() {
+      carwashNo.checked = !this.checked;
+    });
+
+    carwashNo.addEventListener('change', function() {
+      carwashYes.checked = !this.checked;
+    });
+  </script>
+</body>
+</html>

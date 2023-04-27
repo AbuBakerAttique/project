@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking</title>
+  <style>
+   
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background-image: url('car.jpg');
+      background-size: cover;
+      height:auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      height:auto;
+      box-shadow: 0px 0px 10px #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .car-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height:auto;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .search-button {
+      background-color: #dd0000;
+      display: block;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+    .park-button {
+      background-color: #2d1faf;
+      display: block;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+
+    .search-button:hover {
+      background-color: #b36a2f;
+    }
+    
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+    .register-button {
+      background-color: #070707;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+    }
+
+    .register-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+        <h1>Welcome To Smart Parking</h1>
+       
+      </div>
+      <br>
+  <div class="car-form">
+    <form>
+      <label for="username">Enter Vehicle No</label>
+      <input type="text" id="username" name="username" class="input-field" placeholder="Enter your Vehicle No">
+      <button type="submit" class="search-button">Search</button>
+      <h1>As A Guest</h1>
+      <label for="guest">Enter Vehicle No</label>
+      <input type="text" id="guest" name="guest" class="input-field" placeholder="Enter your Vehicle No">
+      <button type="submit" class="park-button">Park</button>
+      <h1>For Registration </h1>
+
+      <ul>
+        <a href="registration-form.html"
+          target="_blank"><button type="button" class="register-button">Register</button>
+        </a>
+      </ul>
+      
+    </form>
+    
+    
+  </div>
+</body>
+</html>

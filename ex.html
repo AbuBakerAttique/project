@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conditional Example</title>
+</head>
+<body>
+	<label for="checkbox">Show message</label>
+	<input type="checkbox" id="checkbox" onclick="showMessage()">
+
+	<p id="message" style="display: none;">This is a hidden message.</p>
+
+	<script>
+		function showMessage() {
+			var checkbox = document.getElementById("checkbox");
+			var message = document.getElementById("message");
+
+			if (checkbox.checked == true) {
+				message.style.display = "block";
+			} else {
+				message.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>
